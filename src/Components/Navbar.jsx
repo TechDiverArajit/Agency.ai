@@ -20,10 +20,10 @@ const Navbar = ({theme , setTheme})=>{
 
                         <img onClick={openClick} src={assets.close_icon} alt="" className="w-5 absolute top-4 sm:hidden" />
 
-                        <a href="#" className="sm:hover:border-b">Home</a>
-                        <a href="#services" className="sm:hover:border-b">Services</a>
-                        <a href="#our-work" className="sm:hover:border-b">Our Work</a>
-                        <a href="#testimonials" className="sm:hover:border-b">Testimonials</a>
+                        <a onClick={()=>setOpened(false)} href="#" className="sm:hover:border-b">Home</a>
+                        <a onClick={()=>setOpened(false)}  href="#services" className="sm:hover:border-b">Services</a>
+                        <a onClick={()=>setOpened(false)}  href="#our-work" className="sm:hover:border-b">Our Work</a>
+                        <a onClick={()=>setOpened(false)}  href="#testimonials" className="sm:hover:border-b">Testimonials</a>
                            
                     </div> 
                     <div>
