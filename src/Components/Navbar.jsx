@@ -1,5 +1,6 @@
 import { useState } from "react";
 import assets from "../assets/assets";
+import Toggle from "./Toggle";
 
 const Navbar = ({theme , setTheme})=>{
 
@@ -26,8 +27,8 @@ const Navbar = ({theme , setTheme})=>{
                         <a onClick={()=>setOpened(false)}  href="#testimonials" className="sm:hover:border-b">Testimonials</a>
                            
                     </div> 
-                    <div>
-
+                    <div className="flex items-center gap-2 sm:gap-4">
+                        <Toggle theme={theme} setTheme={setTheme}/>
                         <img src={theme==='dark'? assets.menu_icon_dark : assets.menu_icon} alt="" onClick={()=>setOpened(true)} className="w-8 sm:hidden"  />
 
                         <a className="text-sm max-sm:hidden flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 transition-all" href="#contact-us"> Connect <img src={assets.arrow_icon} width={14} alt="" /></a>    
